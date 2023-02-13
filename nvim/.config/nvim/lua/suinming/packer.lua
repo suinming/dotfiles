@@ -13,6 +13,9 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
+    -- bookmark
+    use {'MattesGroeger/vim-bookmarks'}
+
 	-- carbon-fox color scheme
 	use "EdenEast/nightfox.nvim" -- Packer
 
@@ -27,8 +30,6 @@ return require('packer').startup(function(use)
 			ts_update()
 		end,
 	}
-    -- transparent
-    use('xiyaowong/nvim-transparent')
 
 	-- harpoon
 	use('theprimeagen/harpoon')
@@ -60,13 +61,16 @@ return require('packer').startup(function(use)
 		}
 	}
 
-    -- vim-vue-plugin
-    use 'leafOfTree/vim-vue-plugin'
-
     -- nvim comment
     use "terrortylor/nvim-comment"
 
     -- emmet
     use "mattn/emmet-vim"
+
+    -- prettier
+    use{"prettier/vim-prettier"}
+
+    -- nvim autopairs
+    use "windwp/nvim-autopairs"
 
 end)
