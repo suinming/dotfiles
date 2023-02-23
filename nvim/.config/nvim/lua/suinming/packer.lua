@@ -73,4 +73,7 @@ return require('packer').startup(function(use)
     -- nvim autopairs
     use "windwp/nvim-autopairs"
 
+    -- nvim xkbswitch
+    use "lyokha/vim-xkbswitch"
+
 end)

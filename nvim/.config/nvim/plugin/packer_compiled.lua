@@ -193,6 +193,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/suinming/.local/share/nvim/site/pack/packer/start/vim-prettier",
     url = "https://github.com/prettier/vim-prettier"
+  },
+  ["vim-xkbswitch"] = {
+    loaded = true,
+    path = "/home/suinming/.local/share/nvim/site/pack/packer/start/vim-xkbswitch",
+    url = "https://github.com/lyokha/vim-xkbswitch"
   }
 }
 
