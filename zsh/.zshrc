@@ -134,4 +134,4 @@ function cd_up() {
 alias "cd.."="cd_up"                                
 
 # set up dev env by execute the script
-alias "dev"="cd scripts ; ./dev.zsh $1"
+alias "dev"="cd scripts ; ./dev.sh $1"
