@@ -152,10 +152,12 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # if you execute the program it will open on the corresponding ws
+for_window [class="alacritty"] move to workspace $ws1 
 for_window [class="firefox"] move to workspace $ws2 
 for_window [class="obsidian"] move to workspace $ws3 
 for_window [class="Slack"] move to workspace $ws4 
 for_window [class="KeePassXC"] move to workspace $ws5 
+for_window [class="Code"] move to workspace $ws6 
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -201,9 +203,22 @@ bar {
 # wallpaper
 exec_always feh --bg-fill $HOME/Pictures/49648.jpg  
 
-# auto execute terminal 
-exec --no-startup-id i3-msg 'workspace $ws9; ex set $laptop eDP-1
+# set screen
+set $laptop eDP-1
+set $acer HDMI-1
+
+# set workspace on specific monitor
+workspace 1 output $acer
+workspace 2 output $acer
+workspace 3 output $acer
+workspace 4 output $acer
+workspace 5 output $acer
+workspace 6 output $acer
 workspace 9 output $laptop
 
-# auto execute alacritty terminal 
-exec --no-startup-id i3-msg 'workspace $ws1; exec alacritty'
+# auto execute alacritty firefox keepassxc 
+exec --no-startup-id alacritty
+exec --no-startup-id firefox
+exec --no-startup-id slack 
+exec --no-startup-id keepassxc 
+exec --no-startup-id code
