@@ -5,4 +5,5 @@
     br = branch
     co = checkout
     aa = add --all
+    cm = commit
     gcw = "!sh $HOME/scripts/gcw.sh"
