@@ -3,20 +3,27 @@
 session=$1
 tmux new-session -d -s $session
 
-# set up window 1
+# Initialize a window counter variable
 window=1
-tmux rename-window -t $session:$window 'nvim'
-tmux send-keys -t $session:$window 'cd ~/repo/cambrian/admin_e_commerce_front/' C-m
 
-# set up window 2
-window=2
-tmux new-window -t $session:$window -n 'shoppin'
-tmux send-keys -t $session:$window 'cd ~/repo/cambrian/admin_e_commerce_front/' C-m
+# Loop through all input arguments starting from the second argument
+for arg in "${@:2}"
+do
+    # Perform some action with each argument
+    echo "Processing argument: $arg"
 
-# set up window 3
-window=3
-tmux new-window -t $session:$window -n 'storybook'
-tmux send-keys -t $session:$window 'cd ~/repo/cambrian/' C-m
+    if [$counter -eq 1] 
+    then
+        # code to execute if this is the first argument 
+        tmux rename-window -t $session:$window $arg 
+        tmux send-keys -t $session:$window 'cd ~/repo/' C-m
+    else
+        tmux new-window -t $session:$window -n $arg 
+        tmux send-keys -t $session:$window 'cd ~/repo/' C-m
+    fi
+    # Increment the window counter by 1
+    window=$((window+1))
+done
 
 tmux attach-session -t $session
 
