@@ -4,4 +4,5 @@
 [alias]
     br = branch
     co = checkout
+    aa = add --all
     gcw = "!sh $HOME/scripts/gcw.sh"
