@@ -1,3 +1,4 @@
+git config --global core.editor nvim
 [user]
 	email = 0223314338aa@gmail.com
 	name = suinming
