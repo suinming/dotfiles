@@ -1,7 +1,8 @@
-git config --global core.editor nvim
 [user]
 	email = 0223314338aa@gmail.com
 	name = suinming
+[core]
+  editor = nvim
 [alias]
     br = branch
     co = checkout
