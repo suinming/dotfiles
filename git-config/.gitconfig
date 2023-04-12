@@ -6,4 +6,5 @@
     co = checkout
     aa = add --all
     cm = commit
+    ac = !git add --all && git commit
     gcw = "!sh $HOME/scripts/gcw.sh"
