@@ -1,12 +1,12 @@
 [user]
-	email = 0223314338aa@gmail.com
-	name = suinming
+  email = 0223314338aa@gmail.com
+  name = suinming
 [core]
   editor = nvim
 [alias]
-    br = branch
-    co = checkout
-    aa = add --all
-    cm = commit
-    ac = !git add --all && git commit
-    gcw = "!sh $HOME/scripts/gcw.sh"
+  br = branch
+  co = checkout
+  aa = add --all
+  cm = commit
+  ac = !git add --all && git commit
+  gcw = "!sh $HOME/scripts/gcw.sh"
