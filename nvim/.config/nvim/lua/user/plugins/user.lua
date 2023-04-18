@@ -9,4 +9,8 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  {
+    "mattn/emmet-vim",
+    event = "VeryLazy"
+  },
 }
