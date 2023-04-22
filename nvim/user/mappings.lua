@@ -38,7 +38,7 @@ return {
   v = {
     -- move the code block
     ["J"] = { "<cmd>m '>+1<CR>gv=gv", desc = "move the code block down" },
-    ["K"] = { "<cmd>m '<-2<CR>gv==gv", desc = "move the code block up" },
+    ["K"] = { "<cmd>m '<-2<CR>gv=gv", desc = "move the code block up" },
   },
   t = {
     -- setting a mapping to false will disable it

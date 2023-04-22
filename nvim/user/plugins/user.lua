@@ -11,6 +11,10 @@ return {
   -- },
   {
     "mattn/emmet-vim",
-    event = "VeryLazy"
+    event = "VeryLazy",
+  },
+  {
+    "tpope/vim-fugitive",
+    event = "VeryLazy",
   },
 }
