@@ -59,7 +59,7 @@ alias "cd.."="cd_up"
 
 # alias-2 
 # set up dev env by execute the script
-alias "dev"="bash /dev.sh $1"
+alias "dev"="bash dev.sh $1"
 
 # alias-3
 # generate the nuxt3 project
