@@ -69,6 +69,10 @@ function cd_up() {
 }
 alias "cd.."="cd_up"                                
 
+# alias-2 
+# set up dev environment by execute the script
+alias "dev"="bash dev.sh $1"
+
 # plugins
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
