@@ -1,5 +1,4 @@
 #!/bin/bash 
-#! /usr/bin/env zsh
 # get the project name as the variable
 projectName=$1
 # create the nuxt3 app in the current directory 
