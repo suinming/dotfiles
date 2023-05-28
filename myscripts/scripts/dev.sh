@@ -1,5 +1,4 @@
-#!/bin/bash 
-#! /usr/bin/env zsh
+# !/bin/bash 
 session=$1
 tmux new-session -d -s $session
 

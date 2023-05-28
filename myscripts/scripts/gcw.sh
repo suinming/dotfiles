@@ -1,5 +1,5 @@
-#!/usr/bin/env bash
-set -e
+#!/bin/bash 
+# set -e
 
 # Examples of call:
 # git-clone-bare-for-worktrees git@github.com:name/repo.git
