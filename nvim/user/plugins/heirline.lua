@@ -8,7 +8,7 @@ return {
       status.component.git_branch(),
       status.component.git_diff(),
       status.component.file_info {
-        filename = { modify = ":p:~" }, -- show the current file path
+        filename = { modify = ":p:~" },
       },
       status.component.diagnostics(),
       status.component.fill(),
@@ -17,7 +17,7 @@ return {
       status.component.lsp(),
       status.component.treesitter(),
       { provider = " %4l/%L:%-3c %3p%%" },
-      status.component.mode { surround = { separator = "right" } }, -- show the vim mode
+      status.component.mode { surround = { separator = "right" } },
     }
     return opts
   end,
