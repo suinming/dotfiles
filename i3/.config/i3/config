@@ -221,5 +221,6 @@ workspace 9 output $laptop
 # auto execute alacritty firefox keepassxc 
 exec --no-startup-id alacritty
 exec --no-startup-id vieb 
+exec --no-startup-id obsidian
 exec --no-startup-id discord 
 exec --no-startup-id keepassxc 
