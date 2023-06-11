@@ -6,7 +6,7 @@ return {
       hl = { fg = "fg", bg = "bg" },
       status.component.mode { mode_text = {} },
       status.component.git_branch(),
-      status.component.git_diff(),
+      -- status.component.git_diff(),
       status.component.file_info {
         filename = { modify = ":p:~" },
       },
