@@ -66,8 +66,8 @@ cheatpaths:
 
   # If you have personalized cheatsheets, list them last. They will take
   # precedence over the more global cheatsheets.
-  - name: cht
-    path: /home/suinming/.config/cheat/cheatsheets/cht
+  - name: personal
+    path: /home/suinming/.config/cheat/cheatsheets/personal
     tags: [personal]
     readonly: false
 
