@@ -1,6 +1,21 @@
 {
-  "log": {
-    "prefix": "clg",
-    "body": ["console.log($1)"]
+  "arrow-function": {
+    "prefix": "afn",
+    "body": [
+      "const $1 = ($2) => {",
+      "  $3",
+      "}",
+      ""
+    ]
+  },
+  "try-catch": {
+    "prefix": "tyc",
+    "body": [
+      "try {",
+      "  $1",
+      "} catch(error) {",
+      "  console.error(error)",
+      "}"
+    ]
   }
 }

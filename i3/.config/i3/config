@@ -158,7 +158,7 @@ for_window [class="obsidian"] move to workspace $ws3
 for_window [class="discord"] move to workspace $ws4 
 for_window [class="KeePassXC"] move to workspace $ws5 
 for_window [class="Code"] move to workspace $ws6 
-for_window [class="Firefox"] move to workspace $ws7 
+for_window [class="firefox-beta"] move to workspace $ws7 
 for_window [class="Google-chrome"] move to workspace $ws8 
 
 # reload the configuration file
@@ -171,7 +171,6 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
-
         # Pressing left will shrink the window’s width.
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.

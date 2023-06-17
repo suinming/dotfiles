@@ -1,25 +1,21 @@
 {
-  "vue-ts-template": {
-    "prefix": "vtm",
+  "arrow-function": {
+    "prefix": "afn",
     "body": [
-      "<template>",
-      "\t$1",
-      "</template>",
-      "",
-      "<script lang=\"ts\" setup>",
-      "\t$2",
-      "</script>",
-      "",
-      "<style lang=\"sass\">",
-      "\t$3",
-      "</style>",
+      "const $1 = ($2) => {",
+      "  $3",
+      "}",
       ""
     ]
   },
-  "log": {
-    "prefix": "clg",
+  "try-catch": {
+    "prefix": "tyc",
     "body": [
-      "console.log($1)"
+      "try {",
+      "  $1",
+      "} catch(error) {",
+      "  console.error(error)",
+      "}"
     ]
   }
 }
