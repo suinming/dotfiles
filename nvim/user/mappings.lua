@@ -34,6 +34,11 @@ return {
     ["<leader>j"] = { "<cmd>lua require('harpoon.ui').nav_file(4) <CR>", desc = "switch to 4" },
     ["<leader>k"] = { "<cmd>lua require('harpoon.ui').nav_file(5) <CR>", desc = "switch to 5" },
     ["<leader>l"] = { "<cmd>lua require('harpoon.ui').nav_file(6) <CR>", desc = "switch to 6" },
+    ["<leader>G"] = { "<cmd>Gvdiffsplit! <CR>", desc = "3-way diff" },
+    ["<leader>rj"] = { "<cmd>diffget //2 <CR>", desc = "get target branch" },
+    ["<leader>rk"] = { "<cmd>diffget //3 <CR>", desc = "get merge branch" },
+    ["<leader>off"] = { "<cmd>ObsidianQuickSwitch <CR>", desc = "find file in obsidian vault" },
+    ["<leader>ofw"] = { "<cmd>ObsidianSearch <CR>", desc = "fuzzy find word in obsidian vault" },
   },
   v = {
     -- move the code block
