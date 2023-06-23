@@ -1,28 +1,33 @@
 # !/bin/bash 
-session=$1
-tmux new-session -d -s $session
+session="develop"
+tmux new-session -d -s $session  
 
-# Initialize a window counter variable
-window=1
+# nvim window
+tmux rename-window -t $session:1 "nvim" 
+tmux send-keys -t $session:1 'cd ~/repo/glad' C-m
 
-# Loop through all input arguments starting from the second argument
-for arg in "${@:2}"
-do
-    # Perform some action with each argument
-    echo "Processing argument: $arg"
+# serve window
+tmux new-window -t $session
+tmux rename-window -t $session:2 "serve" 
+tmux send-keys -t $session:2 'cd ~/repo/glad' C-m
 
-    if [$counter -eq 1] 
-    then
-        # code to execute if this is the first argument 
-        tmux rename-window -t $session:$window $arg 
-        tmux send-keys -t $session:$window 'cd ~/repo/' C-m
-    else
-        tmux new-window -t $session:$window -n $arg 
-        tmux send-keys -t $session:$window 'cd ~/repo/' C-m
-    fi
-    # Increment the window counter by 1
-    window=$((window+1))
-done
+# obs window
+tmux new-window -t $session
+tmux rename-window -t $session:3 "obs"  
+tmux send-keys -t $session:3 'cd ~/repo/digitalMind' C-m
+
+# cht window
+tmux new-window -t $session
+tmux rename-window -t $session:4 "cht" 
+tmux send-keys -t $session:4 'cd ~/repo/cht' C-m 
+
+# tmp window
+tmux new-window -t $session
+tmux rename-window -t $session:5 "tmp" 
+tmux send-keys -t $session:5 
+
+# focus on first window 
+tmux select-window -t $session:1 
 
 tmux attach-session -t $session
 
