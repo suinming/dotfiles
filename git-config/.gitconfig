@@ -3,6 +3,7 @@
 	name = suinming
 [core]
   editor = nvim
+  excludesfile = ~/.gitignore_global
 [alias]
     br = branch
     co = checkout
