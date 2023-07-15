@@ -1,4 +1,4 @@
 return {
   "MattesGroeger/vim-bookmarks",
-  event = "VeryLazy",
+  event = "VimEnter",
 }
