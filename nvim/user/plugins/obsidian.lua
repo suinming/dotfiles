@@ -81,6 +81,8 @@ return {
     -- Optional, for templates (see below).
     templates = {
       subdir = "templates",
+      date_format = "%Y-%m-%d-%a",
+      time_format = "%H:%M",
     },
 
     -- Optional, by default when you use `:ObsidianFollowLink` on a link to an external
