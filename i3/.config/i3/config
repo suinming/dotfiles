@@ -202,7 +202,7 @@ bar {
 }
 
 # wallpaper
-exec_always feh --bg-fill $HOME/Pictures/49648.jpg  
+exec_always feh --bg-fill $HOME/Pictures/wp11165377-classic-art-women-wallpapers.jpg
 
 # set screen
 set $laptop eDP-1
