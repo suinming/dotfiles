@@ -204,6 +204,9 @@ bar {
 # wallpaper
 exec_always feh --bg-fill $HOME/Pictures/wp11165377-classic-art-women-wallpapers.jpg
 
+# xkb-switch
+exec_always --no-startup-id xkb-switch --i3
+
 # set screen
 set $laptop eDP-1
 set $acer HDMI-1

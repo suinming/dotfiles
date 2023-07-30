@@ -8,14 +8,10 @@
       ""
     ]
   },
-  "try-catch": {
-    "prefix": "tyc",
+  "console-error": {
+    "prefix": "ce",
     "body": [
-      "try {",
-      "  $1",
-      "} catch(error) {",
-      "  console.error(error)",
-      "}"
+      "console.error($1)"
     ]
   }
 }
