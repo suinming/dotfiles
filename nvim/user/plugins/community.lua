@@ -9,5 +9,5 @@ return {
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.file-explorer.oil-nvim" },
   { import = "astrocommunity.note-taking.obsidian-nvim" },
-  { import = "astrocommunity.editing-support.auto-save-nvim", lazy = false },
+  -- { import = "astrocommunity.editing-support.auto-save-nvim", lazy = false },
 }
