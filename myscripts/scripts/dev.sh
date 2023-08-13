@@ -45,12 +45,12 @@ tmux new-session -d -s $sessionThree
 
 # obsidian window
 tmux rename-window -t $sessionThree:1 "obsidian"
-tmux send-keys -t $sessionThree:1 'cd ~/repo/digitalMind/' C-m
+tmux send-keys -t $sessionThree:1 'nvim ~/repo/digitalMind' C-m
 
 # cheat sheet window
 tmux new-window -t $sessionThree
 tmux rename-window -t $sessionThree:2 'cheatSheet' 
-tmux send-keys -t $sessionThree:2 'cd ~/repo/cht/' C-m
+tmux send-keys -t $sessionThree:2 'nvim ~/repo/cht' C-m
 
 # Focus on first window
 tmux select-window -t $sessionThree:1
