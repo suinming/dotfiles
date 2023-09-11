@@ -1,5 +1,5 @@
 {
-  "name": "suinming snippets",
+  "name": "snippets",
   "engines": {
     "vscode": "^1.11.0"
   },
@@ -7,11 +7,12 @@
     "snippets": [
       {
         "language": [
-          "javascript"
+          "javascript",
+          "typescript"
         ],
-        "path": "./js.json"
+        "path": "./js-ts.json"
       },
-      { 
+      {
         "language": [
           "vue"
         ],

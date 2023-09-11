@@ -3,6 +3,7 @@ return {
   dependencies = { -- add a new dependency to telescope that is our new plugin
     "nvim-telescope/telescope-media-files.nvim",
     "nvim-lua/popup.nvim",
+    "debugloop/telescope-undo.nvim",
   },
   extensions = {
     media_files = {
