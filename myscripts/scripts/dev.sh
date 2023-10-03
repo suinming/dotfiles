@@ -59,7 +59,11 @@ tmux new-session -d -s $sessionFour
 tmux rename-window -t $sessionFour:1 "tmp"
 
 # pycharm window
-tmux rename-window -t $sessionFour:2 "pycharm"
+tmux new-window -t $sessionFour
+tmux rename-window -t $sessionFour:2 'pycharm' 
+
+# Focus on first window
+tmux select-window -t $sessionFour:1
 
 # Create session 5 -----
 tmux new-session -d -s $sessionFifth
