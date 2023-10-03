@@ -1,3 +1,4 @@
+figlet -t -f starwars "Be Patient" | lolcat
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -53,6 +54,10 @@ export NVM_DIR="$HOME/.nvm"
 
 # export path variable
 export PATH=$PATH:~/dotfiles/myscripts/scripts
+export XMODIFIERS=@im=fcitx
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export PATH=$HOME/.tmux/plugins/t-smart-tmux-session-manager/bin:$PATH
 
 # alias-1
 # cd up to n dirs
@@ -70,11 +75,27 @@ function cd_up() {
 alias "cd.."="cd_up"                                
 
 # alias-2 
-# set up dev environment by execute the script
-alias "dev"="bash dev.sh $1"
+# set up dev env by execute the script
+alias "dev"="bash dev.sh"
+
+# alias-3
+# trash cli
+alias "tp"="trash-put"
+alias "tm"="trash-empty"
+alias "tl"="trash-list"
+ 
+# alias-4
+# execute pycharm
+alias "pycharm"="cd ~/Downloads/pycharm-community-2023.2.1/bin && ./pycharm.sh"
 
 # plugins
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 source ~/.config/zsh/zsh-you-should-use/you-should-use.plugin.zsh
 source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+# zoxide
+eval "$(zoxide init zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
