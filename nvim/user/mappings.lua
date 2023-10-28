@@ -37,8 +37,6 @@ return {
     ["<leader>G"] = { "<cmd>Gvdiffsplit! <CR>", desc = "3-way diff" },
     ["<leader>rj"] = { "<cmd>diffget //2 <CR>", desc = "get target branch" },
     ["<leader>rk"] = { "<cmd>diffget //3 <CR>", desc = "get merge branch" },
-    ["<leader>off"] = { "<cmd>ObsidianQuickSwitch <CR>", desc = "find file in obsidian vault" },
-    ["<leader>ofw"] = { "<cmd>ObsidianSearch <CR>", desc = "fuzzy find word in obsidian vault" },
     -- telescope image preview
     ["<leader>fp"] = {
       function() require("telescope").extensions.media_files.media_files() end,

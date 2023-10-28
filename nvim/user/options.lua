@@ -18,10 +18,6 @@ return {
     diagnostics_mode = 3,            -- set the visibility of diagnostics in the UI (0=off, 1=only show in status line, 2=virtual text off, 3=all on)
     icons_enabled = true,            -- disable icons in the UI (disable if no nerd font is available, requires :PackerSync after changing)
     ui_notifications_enabled = true, -- disable notifications when toggling UI elements
-    bookmark_sign = "󱓞",
-    bookmark_annotation_sign = "󱇗",
-    bookmark_save_per_working_dir = 1,
-    bookmark_auto_save = 1,
     XkbSwitchEnabled = 1,
     XkbSwitchLib = "/usr/local/lib/libxkbswitch.so",
     XkbSwitchNLayout = "us",
