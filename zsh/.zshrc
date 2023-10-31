@@ -59,7 +59,6 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export PATH=$HOME/.tmux/plugins/t-smart-tmux-session-manager/bin:$PATH
 
-# alias-1
 # cd up to n dirs
 # using:  cd.. 10   cd.. dir
 function cd_up() {
@@ -74,19 +73,26 @@ function cd_up() {
 }
 alias "cd.."="cd_up"                                
 
-# alias-2 
-# set up dev env by execute the script
-alias "dev"="bash dev.sh"
-
-# alias-3
 # trash cli
-alias "tp"="trash-put"
-alias "tm"="trash-empty"
-alias "tl"="trash-list"
+alias tp="trash-put"
+alias tm="trash-empty"
+alias tl="trash-list"
  
-# alias-4
 # execute pycharm
-alias "pycharm"="cd ~/Downloads/pycharm-community-2023.2.1/bin && ./pycharm.sh"
+alias pycharm="cd ~/Downloads/pycharm-community-2023.2.1/bin && ./pycharm.sh"
+
+# git
+alias gst='git status'
+alias gbr="git branch"
+function git_checkout() {
+  git checkout $1; 
+}
+alias gco="git_checkout"
+alias gaa="git add --all"
+alias gcm="git commit"
+alias gac="git add --all && git commit"
+alias gwt="git worktree"
+alias gcw="!sh $HOME/dotfiles/myscripts/scripts/gcw.sh"
 
 # plugins
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
