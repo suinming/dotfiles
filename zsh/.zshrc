@@ -72,6 +72,7 @@ function cd_up() {
   esac
 }
 alias "cd.."="cd_up"                                
+alias uu="sudo apt update && sudo apt upgrade -y"
 
 # trash cli
 alias tp="trash-put"
@@ -79,20 +80,21 @@ alias tm="trash-empty"
 alias tl="trash-list"
  
 # execute pycharm
-alias pycharm="cd ~/Downloads/pycharm-community-2023.2.1/bin && ./pycharm.sh"
+alias pycharm="bash ~/Downloads/pycharm-community-2023.2.1/bin/pycharm.sh"
 
 # git
-alias gst='git status'
+alias gs='git status'
 alias gbr="git branch"
-function git_checkout() {
-  git checkout $1; 
-}
-alias gco="git_checkout"
+alias gco="git checkout \$1 \$2"
+alias gre="git restore \$1"
 alias gaa="git add --all"
 alias gcm="git commit"
+alias gp="git push \$1 \$2"
 alias gac="git add --all && git commit"
-alias gwt="git worktree"
-alias gcw="!sh $HOME/dotfiles/myscripts/scripts/gcw.sh"
+alias gwc="bash $HOME/dotfiles/myscripts/scripts/gwc.sh" # execute git worktree clone bash script
+alias gwl="git worktree list"
+alias gwa="git worktree add \$1 \$2" # there might be one or two arguments
+alias gwr="git worktree remove \$1"
 
 # plugins
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
