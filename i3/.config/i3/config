@@ -203,7 +203,7 @@ bar {
 }
 
 # wallpaper
-exec_always feh --bg-fill $HOME/Pictures/wp11165377-classic-art-women-wallpapers.jpg
+exec_always feh --bg-fill $HOME/Pictures/serenity-prayer.jpg
 
 # set screen
 set $laptop eDP-1
