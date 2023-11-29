@@ -72,7 +72,7 @@ function cd_up() {
   esac
 }
 alias "cd.."="cd_up"                                
-alias uu="sudo apt update && sudo apt upgrade -y"
+alias uu="sudo apt update -y && sudo apt upgrade -y"
 
 # trash cli
 alias tp="trash-put"
@@ -90,6 +90,7 @@ alias gre="git restore \$1"
 alias gaa="git add --all"
 alias gcm="git commit"
 alias gp="git push origin \$1"
+alias gpl="git pull origin \$1"
 alias gac="git add --all && git commit"
 alias gwc="bash $HOME/dotfiles/myscripts/scripts/gwc.sh" # execute git worktree clone bash script
 alias gwl="git worktree list"
