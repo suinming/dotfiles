@@ -8,6 +8,16 @@
       ""
     ]
   },
+  "try-catch": {
+    "prefix": "tc",
+    "body": [
+      "try {",
+      "  const {} = await $1;",
+      "} catch(e) {",
+      "  console.error(e)",
+      "}"
+    ]
+  },
   "console-log": {
     "prefix": "cl",
     "body": [
