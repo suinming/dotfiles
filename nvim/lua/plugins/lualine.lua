@@ -17,7 +17,7 @@ return {
 						},
 					},
 					lualine_x = {},
-					lualine_y = {},
+					lualine_y = {"selectioncount"},
 					lualine_z = { "%l/%L" },
 				},
 			})

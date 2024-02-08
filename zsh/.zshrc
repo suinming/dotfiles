@@ -1,16 +1,8 @@
-figlet -t -f starwars "Be Patient" | lolcat
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# print be patient
+# figlet -t -f starwars "Be Patient" | lolcat
 
-# Set up the prompt
-
-autoload -Uz promptinit
-promptinit
-prompt adam1
+# prompt the system info
+screenfetch
 
 setopt histignorealldups sharehistory
 
@@ -43,10 +35,6 @@ zstyle ':completion:*' verbose true
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -54,10 +42,12 @@ export NVM_DIR="$HOME/.nvm"
 
 # export path variable
 export PATH=$PATH:~/dotfiles/myscripts/scripts
+export PATH=$PATH:~/anaconda3/bin
+export PATH=$PATH:~/.tmux/plugins/t-smart-tmux-session-manager/bin
+export PATH=$PATH:~/bun/bin
 export XMODIFIERS=@im=fcitx
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
-export PATH=$HOME/.tmux/plugins/t-smart-tmux-session-manager/bin:$PATH
 
 # cd up to n dirs
 # using:  cd.. 10   cd.. dir
@@ -80,9 +70,9 @@ alias tm="trash-empty"
 alias tl="trash-list"
  
 # execute pycharm
-alias pycharm="bash ~/Downloads/pycharm-community-2023.2.1/bin/pycharm.sh"
+# alias pycharm="bash ~/Downloads/pycharm-community-2023.2.1/bin/pycharm.sh"
 
-# git
+# git alias
 alias gs='git status'
 alias gbr="git branch"
 alias gco="git checkout \$1 \$2"
@@ -97,14 +87,28 @@ alias gwl="git worktree list"
 alias gwa="git worktree add \$1 \$2" # there might be one or two arguments
 alias gwr="git worktree remove \$1"
 
-# plugins
+# zsh plugins
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 source ~/.config/zsh/zsh-you-should-use/you-should-use.plugin.zsh
 source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # zoxide
 eval "$(zoxide init zsh)"
 
+# pyenv
+eval "$(pyenv init -)"
+
+
+# fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# bun completions
+[ -s "/home/suinming/.bun/_bun" ] && source "/home/suinming/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# start ship 
+eval "$(starship init zsh)"
