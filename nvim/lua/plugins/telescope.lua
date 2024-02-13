@@ -5,7 +5,7 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     tag = "0.1.5",
-    dependencies = { "nvim-lua/plenary.nvim" },
+    dependencies = { "nvim-lua/plenary.nvim", "debugloop/telescope-undo.nvim" },
     config = function()
       local actions = require("telescope.actions")
       local builtin = require("telescope.builtin")
@@ -44,6 +44,8 @@ return {
         builtin.grep_string({ search = word })
       end)
       require("telescope").load_extension("ui-select")
+      require("telescope").load_extension("undo")
+      vim.keymap.set("n", "<leader>u", "<cmd>Telescope undo<cr>")
     end,
   },
 }

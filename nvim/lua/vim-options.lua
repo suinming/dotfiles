@@ -32,3 +32,6 @@ vim.cmd("set path=.,src,@")
 vim.cmd("set suffixesadd=.js,.jsx,.vue")
 vim.cmd("set isfname+=@-@")
 vim.cmd("set includeexpr=substitute(v:fname,'^@/','src/','')")
+
+-- obsidian.nvim
+vim.opt.conceallevel = 1

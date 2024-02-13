@@ -35,6 +35,16 @@ return {
 						-- { source = "git_status", display_name = " Git" },
 					},
 				},
+				filesystem = {
+					commands = {
+						-- Override delete to use trash instead of rm
+						delete = function(state)
+							local path = state.tree:get_node().path
+							vim.fn.system({ "trash", vim.fn.fnameescape(path) })
+							require("neo-tree.sources.manager").refresh(state.name)
+						end,
+					},
+				},
 			})
 			vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", {})
 			vim.keymap.set("n", "<leader>bf", ":Neotree buffers reveal float<CR>", {})
@@ -46,8 +56,46 @@ return {
 		-- Optional dependencies
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
-			require("oil").setup()
+			require("oil").setup({
+				delete_to_trash = true,
+			})
 			vim.keymap.set("n", "<leader>O", "<CMD>Oil<CR>", {})
 		end,
+	},
+	{
+		"epwalsh/obsidian.nvim",
+		version = "*", -- recommended, use latest release instead of latest commit
+		lazy = true,
+		ft = "markdown",
+		dependencies = {
+			-- Required.
+			"nvim-lua/plenary.nvim",
+		},
+		opts = {
+			workspaces = {
+				{
+					name = "digitalMind",
+					path = "~/repo/digitalMind/",
+				},
+			},
+			templates = {
+				subdir = "templates",
+			},
+			note_frontmatter_func = function(note)
+				local out = { tags = note.tags }
+				-- `note.metadata` contains any manually added fields in the frontmatter.
+				-- So here we just make sure those fields are kept in the frontmatter.
+				if note.metadata ~= nil and not vim.tbl_isempty(note.metadata) then
+					for k, v in pairs(note.metadata) do
+						out[k] = v
+					end
+				end
+				return out
+			end,
+		},
+		keys = {
+			{ "<leader>on", "<cmd>ObsidianNew<CR>", desc = "create new Note" },
+			{ "<leader>ot", "<cmd>ObsidianTemplate<CR>", desc = "insert template" },
+		},
 	},
 }
