@@ -4,6 +4,7 @@
   "cmp-nvim-lsp": { "branch": "main", "commit": "5af77f54de1b16c34b23cba810150689a3a90312" },
   "cmp_luasnip": { "branch": "master", "commit": "05a9ab28b53f71d1aece421ef32fee2cb857a843" },
   "flash.nvim": { "branch": "main", "commit": "48817af25f51c0590653bbc290866e4890fe1cbe" },
+  "flote.nvim": { "branch": "main", "commit": "26edcdbd148f2950efc6ab22081e05165429edf4" },
   "fold-preview.nvim": { "branch": "main", "commit": "b7920cb0aba2b48a6b679bff45f98c3ebc0f0b89" },
   "friendly-snippets": { "branch": "main", "commit": "5cc1f45c6aac699ad008fb85f6ae03236062667d" },
   "git-worktree.nvim": { "branch": "main", "commit": "b6f06312850ec2657921484c1c7c34ff0468f4f2" },
@@ -42,5 +43,6 @@
   "vim-dadbod-completion": { "branch": "master", "commit": "c920cb0ba3dff4b1b0ed373e1c0b3007dec696c2" },
   "vim-dadbod-ui": { "branch": "master", "commit": "165699c573469e6a95b48d35052f848c340c5911" },
   "vim-fugitive": { "branch": "master", "commit": "9f92ff14d9d1169e08f197a2250fcaea88e9c767" },
-  "vim-illuminate": { "branch": "master", "commit": "305bf07b919ac526deb5193280379e2f8b599926" }
+  "vim-illuminate": { "branch": "master", "commit": "305bf07b919ac526deb5193280379e2f8b599926" },
+  "vim-tpipeline": { "branch": "master", "commit": "86be2d4d7719db34d651df4690ab5f49274c646a" }
 }

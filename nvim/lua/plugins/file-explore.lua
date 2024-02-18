@@ -62,40 +62,4 @@ return {
 			vim.keymap.set("n", "<leader>O", "<CMD>Oil<CR>", {})
 		end,
 	},
-	{
-		"epwalsh/obsidian.nvim",
-		version = "*", -- recommended, use latest release instead of latest commit
-		lazy = true,
-		ft = "markdown",
-		dependencies = {
-			-- Required.
-			"nvim-lua/plenary.nvim",
-		},
-		opts = {
-			workspaces = {
-				{
-					name = "digitalMind",
-					path = "~/repo/digitalMind/",
-				},
-			},
-			templates = {
-				subdir = "templates",
-			},
-			note_frontmatter_func = function(note)
-				local out = { tags = note.tags }
-				-- `note.metadata` contains any manually added fields in the frontmatter.
-				-- So here we just make sure those fields are kept in the frontmatter.
-				if note.metadata ~= nil and not vim.tbl_isempty(note.metadata) then
-					for k, v in pairs(note.metadata) do
-						out[k] = v
-					end
-				end
-				return out
-			end,
-		},
-		keys = {
-			{ "<leader>on", "<cmd>ObsidianNew<CR>", desc = "create new Note" },
-			{ "<leader>ot", "<cmd>ObsidianTemplate<CR>", desc = "insert template" },
-		},
-	},
 }

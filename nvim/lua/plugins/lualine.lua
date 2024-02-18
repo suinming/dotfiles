@@ -17,10 +17,13 @@ return {
 						},
 					},
 					lualine_x = {},
-					lualine_y = {"selectioncount"},
+					lualine_y = { "selectioncount" },
 					lualine_z = { "%l/%L" },
 				},
 			})
 		end,
+	},
+	{
+		"vimpostor/vim-tpipeline",
 	},
 }
