@@ -373,11 +373,18 @@ bind C-Space send-prefix
 # if you don't want Oh my tmux! to alter a binding, use #!important
 # bind c new-window -c '#{pane_current_path}' #!important
 
-# move status line to top
-set -g status-position top
+# adjust status line position 
+set -g status-position bottom 
 
 # execute tmux switch session script
 bind-key S run-shell -b "~/.config/tmux/tmux-switch-session.sh"
+
+# vim-tpipeline
+set -g focus-events on
+set -g status-style bg=default
+set -g status-left-length 90
+set -g status-right-length 90
+# set -g status-justify centre
 
 # -- tpm -----------------------------------------------------------------------
 
