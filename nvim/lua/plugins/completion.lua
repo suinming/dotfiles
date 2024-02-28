@@ -69,23 +69,12 @@ return {
 			})
 		end,
 	},
-	{
-		"windwp/nvim-autopairs",
-		event = "InsertEnter",
-		opts = {}, -- this is equalent to setup({}) function
-	},
-	{
-		"windwp/nvim-ts-autotag",
-		lazy = false,
-		config = function()
-			require("nvim-treesitter.configs").setup({
-				autotag = {
-					enable = true,
-				},
-			})
-		end,
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-		},
-	},
+  {
+    "tmsvg/pear-tree",
+    lazy = false
+  },
+  {
+    "mattn/emmet-vim",
+    lazy = false
+  },
 }

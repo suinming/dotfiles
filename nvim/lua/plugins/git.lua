@@ -4,6 +4,10 @@ return {
     lazy = false,
   },
   {
+    "tpope/vim-unimpaired",
+    lazy = false,
+  },
+  {
     "polarmutex/git-worktree.nvim",
     config = function()
       vim.keymap.set(
