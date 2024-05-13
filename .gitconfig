@@ -1,0 +1,14 @@
+[user]
+	email = 0223314338aa@gmail.com
+	name = suinming
+[core]
+  editor = nvim
+  excludesfile = ~/.gitignore_global
+[alias]
+    br = branch
+    co = checkout
+    aa = add --all
+    cm = commit
+    ac = !git add --all && git commit
+[commit]
+    template = ~/.gitmessage
