@@ -47,6 +47,7 @@ export PATH=$PATH:~/.tmux/plugins/t-smart-tmux-session-manager/bin
 export PATH=$PATH:~/bun/bin
 export PATH=$PATH:/home/suinming/.local/share/npm
 export PATH=$PATH:/home/suinming/.local/share/npm/bin
+export PATH=$PATH:/home/suinming/.local/share/bob/nvim-bin
 export XMODIFIERS=@im=fcitx
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx

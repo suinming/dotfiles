@@ -90,6 +90,13 @@ return {
       lspconfig.yamlls.setup({
         capabilites = capabilities,
       })
+      -- docker
+      lspconfig.dockerls.setup({
+        capabilites = capabilities,
+      })
+      lspconfig.docker_compose_language_service.setup({
+        capabilites = capabilities,
+      })
       -- keymap
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
