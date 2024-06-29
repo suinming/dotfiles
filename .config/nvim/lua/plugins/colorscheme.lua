@@ -1,13 +1,16 @@
 return {
   {
-    "diegoulloao/neofusion.nvim",
+    "rose-pine/neovim",
     lazy = false,
-    name = "neofusion",
+    name = "rose-pine",
     priority = 1000,
     config = function()
-      require("neofusion").setup({})
-      vim.o.background = "dark"
-      vim.cmd.colorscheme("neofusion")
+      require("rose-pine").setup({
+        groups = {
+          background = "#000000",
+        },
+      })
+      vim.cmd.colorscheme("rose-pine")
     end,
   },
   -- highlight the variables

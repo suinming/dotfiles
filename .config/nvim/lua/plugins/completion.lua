@@ -21,11 +21,6 @@ return {
 		config = function()
 			local cmp = require("cmp")
 			local luasnip = require("luasnip")
-			--[[ local has_words_before = function()
-				local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-				return col ~= 0
-					and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
-			end ]]
 			cmp.setup({
 				window = {
 					documentation = cmp.config.window.bordered(),
@@ -37,14 +32,11 @@ return {
 					end,
 				},
 				mapping = cmp.mapping.preset.insert({
-          -- select the autocomplete by using C-j C-k
 					["<C-j>"] = cmp.mapping(function(fallback)
 						if cmp.visible() then
 							cmp.select_next_item()
 						elseif luasnip.expand_or_jumpable() then
 							luasnip.expand_or_jump()
-						--[[ elseif has_words_before() then
-							cmp.complete() ]]
 						else
 							fallback()
 						end
@@ -70,6 +62,20 @@ return {
 			})
 		end,
 	},
+	-- {
+	-- 	"echasnovski/mini.completion",
+	-- 	version = false,
+	-- 	config = function()
+	-- 		require("mini.completion").setup({
+	-- 			mappings = {
+	-- 				force_twostep = "",
+	-- 				force_fallback = "",
+	-- 			},
+	-- 		})
+	-- 		vim.keymap.set("i", "<C-j>", [[pumvisible() ? "\<C-n>" : "\<Tab>"]], { expr = true })
+	-- 		vim.keymap.set("i", "<C-k>", [[pumvisible() ? "\<C-p>" : "\<S-Tab>"]], { expr = true })
+	-- 	end,
+	-- },
 	{
 		"tmsvg/pear-tree",
 		lazy = false,

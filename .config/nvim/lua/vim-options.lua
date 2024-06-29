@@ -52,3 +52,11 @@ vim.g.pear_tree_smart_backspace = 1
 
 -- molten
 --[[ vim.g.python3_host_prog=vim.fn.expand("./pyenv/versions/stock-price-scraper/bin/python3") ]]
+
+-- kulala
+vim.filetype.add({
+  extension = {
+    ['http'] = 'http',
+  },
+})
+vim.opt.splitright = true

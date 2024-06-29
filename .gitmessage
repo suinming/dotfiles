@@ -8,11 +8,9 @@
 # test: 增加測試 (when adding missing tests)。
 # chore: 建構程序或輔助工具的變動 (maintain)。
 # revert: 撤銷回覆先前的 commit 例如：revert: type(scope): subject (回覆版本：xxxx)。
-# build-record: 新增build-staging build-prod build-prod-daisuki的紀錄 
 ########72 characters##################################################
 問題：
 # 想解決的問題 
 1.
 調整項目：
-# 說明調整的檔案
 1.
