@@ -1,35 +1,3 @@
-function RenameWithQuickfix()
-	local position_params = vim.lsp.util.make_position_params()
-	local new_name = vim.fn.input("New Name > ")
-
-	position_params.newName = new_name
-
-	vim.lsp.buf_request(0, "textDocument/rename", position_params, function(err, method, result, ...)
-		vim.lsp.handlers["textDocument/rename"](err, method, result, ...)
-
-		local entries = {}
-		if result.changes then
-			for uri, edits in pairs(result.changes) do
-				local bufnr = vim.uri_to_bufnr(uri)
-
-				for _, edit in ipairs(edits) do
-					local start_line = edit.range.start.line + 1
-					local line = vim.api.nvim_buf_get_lines(bufnr, start_line - 1, start_line, false)[1]
-
-					table.insert(entries, {
-						bufnr = bufnr,
-						lnum = start_line,
-						col = edit.range.start.character + 1,
-						text = line,
-					})
-				end
-			end
-		end
-
-		vim.fn.setqflist(entries, "r")
-	end)
-end
-
 return {
 	{
 		"williamboman/mason.nvim",
@@ -95,13 +63,16 @@ return {
 			lspconfig.docker_compose_language_service.setup({
 				capabilites = capabilities,
 			})
+			-- c
+			lspconfig.clangd.setup({
+				capabilites = capabilities,
+			})
 			-- keymap
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
 			vim.keymap.set("n", "ca", vim.lsp.buf.code_action, {})
 			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {})
-			--[[ vim.keymap.set("n", "<leader>lr", RenameWithQuickfix) ]]
 		end,
 	},
 	{
