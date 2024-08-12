@@ -23,7 +23,7 @@ vim.opt.swapfile = false
 -- set up ufo.nvim linenumber
 vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 vim.o.foldcolumn = "1" -- '0' is not bad
-vim.o.foldlevel = 99   -- Using ufo provider need a large value, feel free to decrease the value
+vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 
@@ -38,13 +38,13 @@ vim.opt.conceallevel = 1
 
 -- pear-tree
 vim.g.pear_tree_pairs = {
-  ["("] = { closer = ")" },
-  ["["] = { closer = "]" },
-  ["{"] = { closer = "}" },
-  ["'"] = { closer = "'" },
-  ['"'] = { closer = '"' },
-  ['<!--'] = { closer = '-->' },
-  ['/*'] = { closer = '*/' },
+	["("] = { closer = ")" },
+	["["] = { closer = "]" },
+	["{"] = { closer = "}" },
+	["'"] = { closer = "'" },
+	['"'] = { closer = '"' },
+	["<!--"] = { closer = "-->" },
+	["/*"] = { closer = "*/" },
 }
 vim.g.pear_tree_smart_openers = 1
 vim.g.pear_tree_smart_closers = 1
@@ -55,8 +55,8 @@ vim.g.pear_tree_smart_backspace = 1
 
 -- kulala
 vim.filetype.add({
-  extension = {
-    ['http'] = 'http',
-  },
+	extension = {
+		["http"] = "http",
+	},
 })
 vim.opt.splitright = true

@@ -20,23 +20,32 @@ return {
 			inlay_hints = { enabled = true },
 		},
 		config = function()
-			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+			local capabilities = require("mini.completion").completefunc_lsp()
 			local lspconfig = require("lspconfig")
+			-- js
+			local mason_registry = require("mason-registry")
+			local vue_language_server_path = mason_registry.get_package("vue-language-server"):get_install_path()
+				.. "/node_modules/@vue/language-server"
 			lspconfig.tsserver.setup({
+				init_options = {
+					plugins = {
+						{
+							name = "@vue/typescript-plugin",
+							location = vue_language_server_path,
+							languages = { "vue" },
+						},
+					},
+				},
 				capabilites = capabilities,
 			})
 			lspconfig.volar.setup({
-				capabilities = capabilities,
-				filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" },
 				init_options = {
 					vue = {
 						hybridMode = false,
 					},
 				},
 			})
-			lspconfig.html.setup({
-				capabilites = capabilities,
-			})
+			-- lua
 			lspconfig.lua_ls.setup({
 				capabilites = capabilities,
 			})

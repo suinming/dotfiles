@@ -124,3 +124,7 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 
 # start ship 
 eval "$(starship init zsh)"
+
+# kulala-fmt
+# kulala-fmt
+alias kulala-fmt="~/Downloads/kulala-fmt-linux"
