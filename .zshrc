@@ -41,8 +41,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # export path variable
+export PATH=~/mybin:$PATH
 export PATH=$PATH:~/myscripts
-export PATH=$PATH:~/anaconda3/bin
 export PATH=$PATH:~/.tmux/plugins/t-smart-tmux-session-manager/bin
 export PATH=$PATH:~/bun/bin
 export PATH=$PATH:/home/suinming/.local/share/npm

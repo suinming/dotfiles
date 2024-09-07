@@ -203,7 +203,7 @@ bar {
 }
 
 # wallpaper
-exec_always feh --bg-fill $HOME/Pictures/8709015.jpg
+exec_always feh --bg-fill $HOME/Pictures/complex.jpg
 
 # set screen
 set $laptop eDP-1
