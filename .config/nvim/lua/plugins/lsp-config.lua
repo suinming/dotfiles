@@ -28,6 +28,7 @@ return {
 				.. "/node_modules/@vue/language-server"
 			-- js, ts
 			lspconfig.ts_ls.setup({
+				capabilities = capabilities,
 				init_options = {
 					plugins = {
 						{
@@ -37,7 +38,6 @@ return {
 						},
 					},
 				},
-				filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
 			})
 			-- vue
 			local function get_vue_version()
@@ -65,6 +65,11 @@ return {
 				-- use volar for vue 3
 				lspconfig.volar.setup({
 					capabilities = capabilities,
+					init_options = {
+						vue = {
+							hybridMode = false,
+						},
+					},
 				})
 			else
 				-- use vetur (vuels) for vue 2
