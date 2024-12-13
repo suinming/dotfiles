@@ -16,6 +16,14 @@ return {
             require("telescope.themes").get_dropdown({}),
           },
         },
+        pickers = {
+          find_files = {
+            theme = "ivy",
+          },
+          live_grep = {
+            theme = "ivy",
+          },
+        },
         defaults = {
           mappings = {
             i = {

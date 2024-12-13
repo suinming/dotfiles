@@ -83,6 +83,8 @@ return {
 			lspconfig.lua_ls.setup({
 				capabilites = capabilities,
 			})
+			-- html
+			lspconfig.html.setup({})
 			-- python
 			lspconfig.pyright.setup({
 				capabilites = capabilities,
