@@ -84,7 +84,7 @@ Config.now(function()
   })
 
   require('nvim-treesitter').setup({
-    ensure_installed = { 'lua', 'vimdoc', 'markdown' },
+    ensure_installed = { 'lua', 'vimdoc', 'markdown', 'html' },
     auto_install = true,
     highlight = { enable = true },
   })
