@@ -5,8 +5,12 @@ tap "railwaycat/emacsmacport", trusted: true
 brew "autoconf"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
+# Python code formatter
+brew "black"
 # XML-based font configuration API for X Windows
 brew "fontconfig"
+# Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
+brew "clang-format"
 # Cross-platform make
 brew "cmake"
 # GNU File, Shell, and Text utilities
@@ -59,5 +63,10 @@ cask "hiddenbar"
 # Password manager app
 cask "keepassxc"
 uv "basedpyright"
+npm "@vue/language-server"
 npm "corepack"
 npm "leetcode-cli"
+npm "prettier"
+npm "pyright"
+npm "typescript-language-server"
+npm "typescript"
