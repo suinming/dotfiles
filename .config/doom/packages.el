@@ -53,8 +53,4 @@
 ;; (unpin! t)
 (package! exec-path-from-shell)
 
-(package! leetcode
-  :recipe (:host github
-           :repo "kaiwk/leetcode.el"))
-
 (package! nerd-icons)
